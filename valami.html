@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./valami.css">
+    <title>Document</title>
+</head>
+<body>
+        
+    <div class="topbar">
+        <img class="logo" src="./logo.png" alt="logo">
+        <span class="logo">WimPi</span>
+        <span class="material-icons logo_right">power_settings_new</span>
+        <span class="material-icons logo_right">settings</span>
+        <span class="material-icons logo_right">account_circle</span>
+        <!-- <div class="logo" onclick={sidebarCcollapse()}>
+            <span class="material-icons icon-arrow toggle-visibility-icon">
+                visibility_off
+                </span>
+        </div> -->
+
+    </div>
+
+    <div class="sidebar">
+
+        <div tabindex="0" class="sidebar-row" id="home" autofocus>
+            <div class="sidebar-col-left material-icons">home</div>
+            <div class="sidebar-col-middle collapse">Kezdőoldal</div>
+            <!-- <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow home-arrow" onclick="dropDownAll()">keyboard_arrow_down</span></div> -->
+            <div class="sidebar-col-right collapse"><span class="material-icons home-arrow" onclick="dropDownAll()">keyboard_arrow_down</span></div>
+
+        </div>
+
+        <div tabindex="0" class="sidebar-row" id="client" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">business_center</div>
+            <div class="sidebar-col-middle collapse">Megrendelők</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown client">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown client">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown client">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+
+        <div tabindex="0" class="sidebar-row" id="subcontractor" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">local_shipping</div>
+            <div class="sidebar-col-middle collapse">Alvállalkozók</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown subcontractor">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown subcontractor">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown subcontractor">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+        
+        <div tabindex="0" class="sidebar-row" id="site" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">business</div>
+            <div class="sidebar-col-middle collapse">Telepek</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown site">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown site">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown site">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+
+        <div tabindex="0" class="sidebar-row" id="aviso" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">border_all</div>
+            <div class="sidebar-col-middle collapse">Avizók</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown aviso">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown aviso">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown aviso">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+
+        <div tabindex="0" class="sidebar-row" id="order" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">description</div>
+            <div class="sidebar-col-middle collapse">Fuvarmegbízás</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown order">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown order">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown order">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+
+        <div tabindex="0" class="sidebar-row" id="transport" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">description</div>
+            <div class="sidebar-col-middle collapse">Napi Levezetés</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown transport">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown transport">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown transport">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+        
+        <div tabindex="0" class="sidebar-row" id="statistic" onclick={toggleDropdown(this.id)}>
+            <div class="sidebar-col-left material-icons">description</div>
+            <div class="sidebar-col-middle collapse">Statisztikák</div>
+            <div class="sidebar-col-right collapse"><span class="material-icons icon-arrow">keyboard_arrow_right</span></div>
+
+        </div>
+
+                <div tabindex="0" class="sidebar-row dropdown statistic">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">pageview</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Keresés</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown statistic">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">format_italic</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Módosítás</div>
+                </div>
+                <div tabindex="0" class="sidebar-row dropdown statistic">
+                    <div class="sidebar-col-left material-icons dropdown-icon-padding">add</div>
+                    <div class="sidebar-col-middle collapse dropdown-text-width">Hozzáadás</div>
+                </div>
+
+    </div>
+
+    <div class="collapse-btn" onclick={sidebarCcollapse()}>
+        <span class="material-icons sidebar-toggle">
+            keyboard_arrow_left
+            </span>
+    </div>    
+
+    <div class="main">
+        <div class="main-element">Megrendelők</div>
+        <div class="main-element">Alvállalkozók</div>
+        <div class="main-element">Telepek</div>
+        <div class="main-element">Avizók</div>
+        <div class="main-element">Fuvarmegbízás</div>
+        <div class="main-element">Napi Levezetés</div>
+        <div class="main-element">Statisztikák</div>
+        <div class="main-element">Valami kártya</div>
+        <div class="main-element">Valami kártya</div>
+        <div class="main-element">Valami kártya</div>
+        <div class="main-element">Valami kártya</div>
+        <div class="main-element">Valami kártya</div>
+
+    </div>
+
+
+<script src="./valami.js"></script>
+</body>
+</html>

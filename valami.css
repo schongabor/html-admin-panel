@@ -1,0 +1,223 @@
+/*
+
+Színek:
+  Main háttér és Hover: ##e9e9e9
+  Top-, Sidebar és Main kártyák: #ffffff
+  Betűk és ikonok: #37474f
+  Main kártyák: ##e9e9e9
+
+  Main háttér és hover: #536377
+  Top- Sidebar: #2f3c4e
+  Betűk és ikonok: #e9eaec
+  Main kártyáyk: #d7dfe8
+
+*/
+
+
+html, body {
+  background-color: ##e9e9e9;
+  color: #37474f;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.material-icons {
+  line-height: unset;
+  font-size: 24px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+/**********************TOP-BAR*****************************/
+.topbar {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  background-color: #37474f;
+  color: white;
+  /* background-color: white; */
+  border-bottom: solid lightgrey 1px;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6); 
+  box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6);
+
+}
+
+.logo {
+  float: left;
+  display: block;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 7px;
+  font-size: 1.75rem;
+}
+
+.toggle-visibility-icon {
+  padding-left: 25px;
+  font-size: 1.75rem;
+}
+
+.logo_right {
+  float: right;
+  display: block;
+  height: 100%;
+  padding-right: 20px;
+  padding-top: 10px;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.logo_right:hover {
+  text-shadow: 0px 0px 15px #000000;
+  font-size: 1.9rem;
+}
+/**********************SIDE-BAR*****************************/
+.sidebar {
+  letter-spacing: 0.5px;
+  position: fixed;
+  /* height: 100%; */
+  bottom: 0px; /* using bottom instead of height solved the scroll overflow off screen issue */
+  width: 200px;
+  z-index: 1;
+  top: 50px;
+  left: 0px;
+  padding-top: 8px;
+  background-color: white;
+  border-right: solid lightgrey 1px;
+  overflow: auto;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6); 
+  box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6); 
+}
+
+.sidebar-row {
+  width: 100%;
+  height: 40px;
+  line-height: 33px;
+  cursor: pointer;
+}
+
+
+.sidebar-row:hover {
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  /* padding-left: 5px; */
+}
+
+.sidebar-row:focus {
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+
+
+.sidebar-col-left {
+  text-align: center;
+  width: 40px;
+  float: left;
+}
+
+.sidebar-col-middle {
+  text-align: left;
+  font-size: 12.5px;
+  width: 120px;
+  float: left;
+}
+
+.sidebar-col-right {
+  float: left;
+  text-align: center;
+  width: 40px;
+  margin-right: 0px;
+}
+
+.dropdown {
+  display: none;
+  font-size: 16px;
+}
+
+/* .dropdown-underline {
+  border-bottom: #37474f 1px solid;
+} */
+
+/*dropdown element padding, when open*/
+.dropdown-icon-padding {
+  padding-left: 30px;
+}
+
+.icon-arrow:hover {
+  text-shadow: 0px 0px 15px #000000;
+  font-size: 30px;
+}
+
+/*dropdown element width when open (to fit in sidebar-row width*/
+.dropdown-text-width {
+  width: 130px;
+}
+
+.home-arrow {
+  font-size: 28px;
+}
+
+.home-arrow:hover {
+  text-shadow: 0px 0px 15px #000000;
+}
+
+.collapse-btn { 
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+  left: 200px;
+  top: 70px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.collapse-btn:hover {
+  /* color: white; */
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+}
+
+
+
+
+/**********************MAIN-AREA*****************************/
+.main {
+  margin-left: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main-element {
+  float: left;
+  background-color: white;
+  border: solid lightgray 1px;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem;
+  width: 270px;
+  height: 200px;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6); 
+  box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.6);
+}
